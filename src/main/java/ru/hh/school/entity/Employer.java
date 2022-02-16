@@ -25,7 +25,7 @@ public class Employer {
   @Column(name = "block_time")
   private LocalDateTime blockTime;
 
-  @OneToMany(mappedBy = "employer")
+  @OneToMany(mappedBy = "employer", cascade = CascadeType.ALL)
   private List<Vacancy> vacancies = new ArrayList<>();
 
   public List<Vacancy> getVacancies() {
@@ -68,5 +68,4 @@ public class Employer {
   public int hashCode() {
     return Objects.hash(companyName);
   }
-
 }
