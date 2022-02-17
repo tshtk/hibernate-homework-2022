@@ -61,11 +61,11 @@ public class Employer {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Employer employer = (Employer) o;
-    return Objects.equals(companyName, employer.companyName);
+    return Objects.equals(id, employer.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(companyName);
+    return Objects.hash(id);
   }
 }

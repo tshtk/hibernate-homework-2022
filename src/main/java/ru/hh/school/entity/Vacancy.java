@@ -112,7 +112,7 @@ public class Vacancy {
 
   @Override
   public int hashCode() {
-    return 17;
+    return id;
   }
 
 }
