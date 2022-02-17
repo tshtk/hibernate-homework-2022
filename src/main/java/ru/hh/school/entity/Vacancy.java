@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -24,8 +23,10 @@ public class Vacancy {
   @JoinColumn(name = "area_id")
   private Area area;
 
+  @Column
   private String title;
 
+  @Column
   private String description;
 
   @ManyToOne(fetch = FetchType.LAZY)
